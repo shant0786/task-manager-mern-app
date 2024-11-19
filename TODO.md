@@ -1,4 +1,4 @@
-1.  Project File Structure
+1.  Project File Structure [Done]
 2.  Project Package
 3.  Route Configaration
 4.  App.js Configaration
