@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon app.js"
   },
   "description": "A web application Api for managing tasks and users",
   "keywords": [
@@ -31,6 +31,7 @@
     "nodemon": "^3.1.7"
   },
   "dependencies": {
-    "mongodb": "^6.10.0"
+    "mongodb": "^6.10.0",
+    "xss-clean": "^0.1.4"
   }
 }

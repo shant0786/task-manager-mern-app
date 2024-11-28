@@ -5,7 +5,8 @@ import helmet from "helmet";
 import hpp from "hpp";
 import xss from "xss-clean";
 import mongoose from "mongoose";
-import router from "./routes/apiRoute";
+import router from "../task-manager-api/routes/api.js";
+
 import {
   MONGODB_CONNECTION,
   JWT_SECRET,
@@ -21,8 +22,7 @@ import {
   REQUEST_LIMIT_NUMBER,
   WEB_CACHE,
   PORT,
-} from "./app/config/config";
-import router from "./routes/api";
+} from "./app/config/config.js";
 
 const app = express();
 
@@ -40,7 +40,7 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 app.set("etag", WEB_CACHE);
-
+app.use(xss());
 // Connect to MongoDB
 mongoose
   .connect(MONGODB_CONNECTION, {
@@ -52,4 +52,8 @@ mongoose
   .then(() => console.log("Connection Successfully established"))
   .catch(() => console.log("Connection Failure"));
 
-  
+app.use("/api", router);
+
+app.listen(PORT, function () {
+  console.log(`Server is running on port ${PORT}`);
+});

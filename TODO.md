@@ -1,7 +1,7 @@
 1.  Project File Structure [Done]
-2.  Project Package
-3.  Route Configaration
-4.  App.js Configaration
+2.  Project Package [Done]
+3.  Route Configaration [Done]
+4.  App.js Configaration [Done]
 5.  PostMan Initial Configaration
 6.  Email Credebtial Configaration
 7.  Write Model Properties
