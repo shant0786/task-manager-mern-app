@@ -11,7 +11,5 @@ const TaskSchema = new mongoose.Schema({
     versionKey:false,timestamps:true,
 })
 
-
-
 const TaskModel= mongoose.model("tasks", TaskSchema);
 export default TaskModel;

@@ -1,6 +1,6 @@
 
 import UsersModel from "../models/UsersModel.js";
-import EncodeToken from "../utility/tokenUtility.js";
+import {EncodeToken} from "../utility/tokenUtility.js";
 
 export const Registration = async (req, res) => {
 
@@ -37,22 +37,33 @@ try {
     message: err.toString(),
 
 })}
+};
 
-};
 export const ProfileDetails = async (req, res) => {
-  return res.json({
-    status: "success",
-    Message: "User profileDetails successfully",
-  });
-};
+  try {
+        const user_id=req.headers["user_id"]
+        if (!user_id){
+          return res.status(401).json({
+            status: "error",
+            message: "Unauthorized access",
+          })}
+        const data=await UsersModel.findOne({"_id": user_id});
+      return res.json({
+          status: "success",
+          data: data,
+      });
+      } catch (err) {
+        return res.status(500).json({
+          status: "error",
+          message: err.toString(),
+        })
+      }
+    }
+;
 export const ProfileUpdate = async (req, res) => {
-  const reqBody=req.body
   const data=await UsersModel.findOne(reqBody);
-  return res.json({
-    status: "success",
-    data: data,
-    message: "User profile details successfully",
-  });
+  const reqBody=req.body
+
 
 };
 export const EmailVerified = async (req, res) => {

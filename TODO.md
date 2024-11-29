@@ -2,13 +2,13 @@
 2. Project Package [Done]
 3. Route Configaration [Done]
 4. App.js Configaration [Done]
-5. PostMan Initial Configaration
-6. Email Credebtial Configaration
-7. token encode decode config
-8. Write Model Properties
-9. Registration API
-10. Login API
-11. Profile Details API
+5. PostMan Initial Configaration [Done]
+6. Email Credebtial Configaration[Done]
+7. token encode decode config[Done]
+8. Write Model Properties[Done]
+9. Registration API[Done]
+10. Login API[Done]
+11. Profile Details API[Done]
 12. Profile Update API
 13. Email Verify API
 14. Code Verify API
