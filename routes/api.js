@@ -1,12 +1,14 @@
 import express from "express";
-import * as TaskController from "../app/controllers/TaskController";
 import * as UsersController from "../app/controllers/UsersController.js";
+import * as TaskController from "../app/controllers/TaskController.js";
+
 
 const router = express.Router();
 
 //    Users routes
 
 router.post("/Registration", UsersController.Registration);
+
 router.post("/Login", UsersController.Login);
 router.get("/ProfileDetails", UsersController.ProfileDetails);
 router.post("/ProfileUpdate", UsersController.ProfileUpdate);

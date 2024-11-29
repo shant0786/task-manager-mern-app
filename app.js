@@ -44,15 +44,12 @@ app.use(xss());
 // Connect to MongoDB
 mongoose
   .connect(MONGODB_CONNECTION, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
+    autoIndex:true
   })
   .then(() => console.log("Connection Successfully established"))
   .catch(() => console.log("Connection Failure"));
 
-app.use("/api", router);
+app.use("/api/v1", router);
 
 app.listen(PORT, function () {
   console.log(`Server is running on port ${PORT}`);

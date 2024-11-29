@@ -1,19 +1,20 @@
-1.  Project File Structure [Done]
-2.  Project Package [Done]
-3.  Route Configaration [Done]
-4.  App.js Configaration [Done]
-5.  PostMan Initial Configaration
-6.  Email Credebtial Configaration
-7.  Write Model Properties
-8.  Registration API
-9.  Login API
-10. Profile Details API
-11. Profile Update API
-12. Email Verify API
-13. Code Verify API
-14. Reset Password API
-15. Create Task API
-16. Update Task API
-17. Task List Status API
-18. Delete Task API
-19. Count Task API
+1. Project File Structure [Done]
+2. Project Package [Done]
+3. Route Configaration [Done]
+4. App.js Configaration [Done]
+5. PostMan Initial Configaration
+6. Email Credebtial Configaration
+7. token encode decode config
+8. Write Model Properties
+9. Registration API
+10. Login API
+11. Profile Details API
+12. Profile Update API
+13. Email Verify API
+14. Code Verify API
+15. Reset Password API
+16. Create Task API
+17. Update Task API
+18. Task List Status API
+19. Delete Task API
+20. Count Task API
