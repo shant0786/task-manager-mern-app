@@ -7,7 +7,7 @@ import {
   MAIL_ENCRYPTION,
 } from "../config/config.js";
 
-const EmailSender = async (EmailTo, EmailText, EmailSubject, EmailHTMLBody) => {
+export const EmailSender = async (EmailTo, EmailText, EmailSubject, EmailHTMLBody) => {
   const transporter = nodemailer.createTransport({
     host: EMAIL_HOST,
     port: EMAIL_PORT,
@@ -24,9 +24,8 @@ const EmailSender = async (EmailTo, EmailText, EmailSubject, EmailHTMLBody) => {
   };
   try {
     await transporter.sendMail(mailOptions);
-    console.log("Email sent successfully!");
-    return true;
+    return "User Email Verified successfully";
   } catch (err) {
-    console.error(err);
+    return "error sending"+err.toString();
   }
 };

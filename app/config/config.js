@@ -8,9 +8,16 @@ export const JWT_EXPIRATION_TIME = 60 * 60 * 24 * 30;
 // Get Your credentials
 export const EMAIL_HOST = "smtp.gmail.com";
 export const EMAIL_PORT = "465";
-export const EMAIL_USER = "ss.sheefa786@gmail.com";
-export const EMAIL_PASSWORD = "ss#sh33f@786gm";
+export const EMAIL_USER = "rm.shanto786@gmail.com";
+export const EMAIL_PASSWORD = "isqpwpxmwwdfjvyt";
 export const MAIL_ENCRYPTION = "ssl";
+
+// export const EMAIL_HOST = "smtp.titan.email";
+// export const EMAIL_PORT = "465";
+// export const EMAIL_USER = "support@laravelpoint.com";
+// export const EMAIL_PASSWORD = "Rup77_4827";
+// export const MAIL_ENCRYPTION="ssl"
+
 
 export const MAX_JSON_SIZE = "10mb";
 export const URL_ENCODED = true;

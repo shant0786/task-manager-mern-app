@@ -13,15 +13,15 @@ router.post("/Registration", UsersController.Registration);
 router.post("/Login", UsersController.Login);
 router.get("/ProfileDetails",AuthController, UsersController.ProfileDetails);
 router.post("/ProfileUpdate",AuthController, UsersController.ProfileUpdate);
-router.post("/EmailVerified", UsersController.EmailVerified);
-router.get("/CodeVerified", UsersController.CodeVerified);
+router.get("/EmailVerified/:email", UsersController.EmailVerified);
+router.get("/CodeVerified/:email/:code", UsersController.CodeVerified);
 router.post("/ResetPassword", UsersController.ResetPassword);
 
 //    Task routes
 router.post("/CreateTask",AuthController, TaskController.CreateTask);
-router.get("/UpdateTaskStatus",AuthController, TaskController.UpdateTaskStatus);
+router.get("/UpdateTaskStatus/:id/:status",AuthController, TaskController.UpdateTaskStatus);
 router.get("/TaskListByStatus",AuthController, TaskController.TaskListByStatus);
-router.post("/DeleteTask",AuthController, TaskController.DeleteTask);
+router.post("/DeleteTask/:id",AuthController, TaskController.DeleteTask);
 router.get("/CountTask",AuthController, TaskController.CountTask);
 
 export default router;
