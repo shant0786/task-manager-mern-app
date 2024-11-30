@@ -1,0 +1,259 @@
+{
+	"info": {
+		"_postman_id": "2d6709ee-8c27-4dc5-8dea-f0fee2e5c3a4",
+		"name": "Task Manager API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34356635"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"shanto@gmail.com\",\r\n    \"firstName\":\"Shanto\",\r\n    \"lastName\":\"Hasan\",\r\n    \"mobile\":\"01755525525\",\r\n    \"password\":\"123\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/Registration"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"email\":\"shanto@gmail.com\",\r\n      \"password\":\"123\"\r\n   \r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/Login"
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Details",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/ProfileDetails"
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{BASE_URL}}/ProfileUpdate"
+					},
+					"response": []
+				},
+				{
+					"name": "Email Verified",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNyYXp5YnVybmVsbEBqdXN0emV1cy5jb20iLCJ1c2VyX2lkIjoiNjc0YWVlNGYwOWUyZDRlMjE0ZjgwOGRiIiwiaWF0IjoxNzMyOTYzOTQ1LCJleHAiOjE3MzU1NTU5NDV9.WjwZGV_vGwNAmD50CTuYdlf9WOuZTUS7mXoHrqGkvcE",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/EmailVerified/crazyburnell@justzeus.com"
+					},
+					"response": []
+				},
+				{
+					"name": "Code Verified",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BASE_URL}}/CodeVerified/crazyburnell@justzeus.com/767915"
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"crazyburnell@justzeus.com\",\r\n    \"code\":\"767915\",\r\n    \"password\":\"abc123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/ResetPassword"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "Create Task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{BASE_URL}}/CreateTask"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Task Status",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/UpdateTaskStatus/674a05d5754651f3a54db1af/complete"
+					},
+					"response": []
+				},
+				{
+					"name": "Task List By Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{BASE_URL}}/TaskListByStatus"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/DeleteTask/674a05d5754651f3a54db1af"
+					},
+					"response": []
+				},
+				{
+					"name": "Count Task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{BASE_URL}}/CountTask"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:5005/api/v1",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InBhb2NodWlAZ21haWwuY29tIiwidXNlcl9pZCI6IjY3NDk1YTQxYjUzNDVmMTcyNDdlN2ExMyIsImlhdCI6MTczMjkwNzgwMywiZXhwIjoxNzM1NDk5ODAzfQ.kFlzmZrRcua_IbjuPlBzbPwS7MQxCQTM1AIh0IaD6Bk",
+			"type": "string"
+		}
+	]
+}
