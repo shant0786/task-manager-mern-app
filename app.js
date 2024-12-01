@@ -44,12 +44,20 @@ app.use(xss());
 // Connect to MongoDB
 mongoose
   .connect(MONGODB_CONNECTION, {
-    autoIndex:true
+    autoIndex: true,
   })
   .then(() => console.log("Connection Successfully established"))
   .catch(() => console.log("Connection Failure"));
 
 app.use("/api/v1", router);
+app.use("*", (req, res) => {
+  res
+    .status(404)
+    .json({
+      status: "fail",
+      data: "Data not found try again with correct api route",
+    });
+});
 
 app.listen(PORT, function () {
   console.log(`Server is running on port ${PORT}`);
