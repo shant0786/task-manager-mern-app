@@ -24,9 +24,9 @@
 
 [Complete] = 13. Email Verify API
 
-       14. Code Verify API
+[Complete] = 14. Code Verify API
 
-       15. Reset Password API
+[Complete] = 15. Reset Password API
 
 [Complete] = 16. Create Task API
 
