@@ -9,13 +9,6 @@ import router from "../task-manager-api/routes/api.js";
 
 import {
   MONGODB_CONNECTION,
-  JWT_SECRET,
-  JWT_EXPIRATION_TIME,
-  EMAIL_HOST,
-  EMAIL_PORT,
-  EMAIL_USER,
-  EMAIL_PASSWORD,
-  MAIL_ENCRYPTION,
   MAX_JSON_SIZE,
   URL_ENCODED,
   REQUEST_LIMIT_TIME,
